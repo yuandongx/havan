@@ -5,9 +5,9 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 import { createTheme, ThemeProvider, useColorScheme } from '@mui/material';
 import { CacheProvider } from '@emotion/react';
-import ResponsiveAppBar from './components/Header';
-import createEmotionCache from './com/createCache';
-import ThemeSwitch from './components/ThemeSwitch';
+import ResponsiveAppBar from '../components/Header';
+import createEmotionCache from '../com/createCache';
+import ThemeSwitch from '../components/ThemeSwitch';
 import { Outlet } from 'react-router';
 const cache = createEmotionCache();
 // 定义light和dark模式的主题配置
@@ -49,7 +49,7 @@ const darkTheme = createTheme({
   },
 });
 
-export default function App() {
+export default function Layout() {
   const { setColorScheme, mode: systemMode } = useColorScheme();
   const [mode, setMode] = useState<'light' | 'dark'>('dark');
   
